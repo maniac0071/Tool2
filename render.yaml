@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: value-betting-tool
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "streamlit run value_betting_tool.py --server.port $PORT"
+    plan: free
+    autoDeploy: true
